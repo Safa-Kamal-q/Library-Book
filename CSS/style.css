@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #F3F3F7;
+    color: #37405f;
+}
+
+/* background img */
+section .bg-img{
+    background-image: url("../imgs/bg-reading-bright.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 330px;
+}
+section .bg-img .text-bg{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: white;
+}
+.bg-img .text-bg h1{
+    font-size: 40px;
+}
+
+/* tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-top: 22px;
+}
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: 90px;
+    background-color: #F0F0F0;
+    color: #01394c;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    font-size: 12px;
+    top: -5px;
+    left: 116%;
+    border: 2px solid #D3D3D3;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #D3D3D3 transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* container */
+section.container{
+    margin: 50px 30px;
+}
+
+ /* search book */
+ .container .search-books{
+    text-align: center;
+    padding: 38px 10px;
+    margin: 10px;
+}
+.container .search-books input{
+    width: 792px;
+    height: 37px;
+    border-radius: 18px;
+    border: 1px solid #ced4da;
+    padding: 14px;
+}
+.search-books input:focus{
+    outline: 0;
+    box-shadow: 0px 0px 0px 2px rgba(0,123,255,.25);
+}
