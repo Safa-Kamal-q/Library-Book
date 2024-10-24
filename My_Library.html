@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Library</title>
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="file:///C:/Users/Admin/Pictures/Screenshots/Screenshot 2024-10-22 173414.png"> -->
+
+        <!-- css style -->
+        <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" href="./CSS/my_library_style.css">
+    </head>
+    <body>
+        <!-- background image -->
+        <section style="position: relative;">
+            <div class="bg-img">
+                <div class="text-bg">
+                    <h1>
+                        Get All the Books
+                        <span style="color: #3A9FC0;display: block;">Your Need!</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add new books -->
+        <div class="Add-book">
+            <button id="btn-add">
+                <span>Book</span> 
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="18" width="17.5" viewBox="0 0 448 512">
+                        <path fill="white" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                    </svg>
+                </span>
+            </button>
+
+            <!-- Form Add Books -->
+            <div class="card-add" id="form-book">
+                <div>
+                    <h2 style="text-align: center;">Add Book </h2>
+                    <form style="padding-right: 15px;">
+                        <div>
+                            <input id="title-book" class="input-form" type="text" name="title" placeholder="Enter book title" required>
+                        </div>
+                        <div>
+                            <textarea id="desc-book" class="input-form" style="font-family: sans-serif;" name="description" placeholder="Enter description" rows="5" required></textarea>
+                        </div>
+                        <div class="flex-input">
+                            <div>
+                                <input id="author-book" class="input-form" type="text" name="author" placeholder="Herb Hillaby, Josie,.." required>
+                            </div>
+                            <div>
+                                <input id="language-book" class="input-form" type="text" name="language" placeholder="English, Arabic, .." required>
+                            </div>
+                            <div>
+                                <input id="gener-book" class="input-form" type="text" name="gener" placeholder="Non-Fiction, Art,.." required>
+                            </div>
+                            <div>
+                                <input id="url-img" class="input-form" type="text" name="urlImage" placeholder="https://.." required>
+                            </div>
+                        </div>
+                        <div class="submit-button">
+                            <button type="button">Submit Book</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <section class="container">
+            <!-- Name page -->
+            <h2 class="text-page">
+                <a href="./Home.html">Home |</a>
+                <span> My Library</span>
+            </h2>
+
+            <!-- Search button -->
+            <div class="search-books">
+                <input type="search" placeholder="Search" aria-label="Search book">
+                <button>
+                    Filter
+                    <svg style="margin-left: 6px;" xmlns="http://www.w3.org/2000/svg" height="18" width="13" viewBox="0 0 320 512">
+                        <path fill="#37405f" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/>
+                    </svg>
+                </button>
+                <!-- List filter -->
+                <div>
+                    <ul class="list-filter">
+                        <li>Book Title</li>
+                        <li>Author</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- All Books -->
+            <div class="book-list">
+                <div class="book-card">
+                    <div class="bg-book">
+                        <!-- content of the book -->
+                        <img class="img-book" src="https://gramentheme.com/html/bookle/assets/img/book/01.png">
+                        <div>
+                            <h3>Castle In The Sky</h3>
+                            <span>Sara Sayed Ahmad</span>
+                            
+                            <div class="bt-book">
+                                <div>
+                                    <button>Read More</button>
+                                </div>
+                                <div class="tooltip">
+                                    <span class="tooltiptext">Mark as read</span>
+                                    <span>
+                                        <img src="./imgs/icons8-open-book-25.png">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <!-- <script>
+        let button = document.getElementById("btn-add");
+        let card = document.getElementById("form-book");
+
+        button.addEventListener("click", function(){
+            if(card.style.display === "none" || card.style.display === ""){
+                card.style.display = "block";
+                
+                
+                button.classList.add("openButton");
+                card.classList.add("display-card");
+            }else{
+                card.style.display = "none"; // Hide the form
+
+                // Remove the style change classes
+                button.classList.remove("openButton");
+            }
+        
+        });
+    </script> -->
+</html>
