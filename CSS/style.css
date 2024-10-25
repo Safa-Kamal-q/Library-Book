@@ -85,7 +85,8 @@ section .bg-img .text-bg{
 
 /* container */
 section.container{
-    margin: 50px 30px;
+    width: calc(100% - 120px);
+    margin: auto;
 }
 
  /* search book */
@@ -134,4 +135,41 @@ section.container{
 }
 .search-books .list-filter li:hover{
     background-color: #efebf5;
+}
+
+/* Card Books */
+section .book-list{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    row-gap: 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.book-list .bg-book{
+    background-color: #d1d1d645;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 12px;
+    box-shadow: 3px 0px 10px 1px #d4d3d6;
+}
+.book-list .book-card{
+    flex-basis: 18%;
+    display: flex;
+    flex-direction: column;
+    column-gap: 5px;
+}
+.book-list .book-card .img-book{
+    width: 100%;
+    height: 296px;
+    object-fit: fill;
+}
+.bg-book div{
+    padding-top: 10px;
+}
+
+.book-list .bg-book .gener{
+    font-size: 14px;
+    color: #2494b9;
 }
