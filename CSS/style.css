@@ -114,8 +114,14 @@ section.container{
     background-color: #3a9fc054;
     color: #01394c;
 }
+#filterContainer {
+    position: relative;
+    display: inline-block;
+}
 .search-books .list-filter{
     position: absolute;
+    top: calc(100% + 5px);
+    left:0;
     display: none;
     list-style: none;
     padding: 0;
@@ -126,12 +132,13 @@ section.container{
     text-align: left;
     border-radius: 5px;
     z-index: 1;
-    left: 74%;
     margin: 3px 0px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 .search-books .list-filter li{
     padding: 14px 10px;
     font-weight: 600;
+    cursor: pointer;
 }
 .search-books .list-filter li:hover{
     background-color: #efebf5;
