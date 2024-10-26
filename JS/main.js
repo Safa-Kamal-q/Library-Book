@@ -28,6 +28,7 @@ function changeReadStatus(bookId) {
     if (book) {
         book.reading_status = !book.reading_status;
         localStorage.setItem("books", JSON.stringify(books));
+        alert("The reading status changed successfully")
     }
 }
 

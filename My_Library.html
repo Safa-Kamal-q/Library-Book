@@ -41,31 +41,31 @@
         <div class="card-add" id="form-book">
             <div>
                 <h2 style="text-align: center;">Add Book </h2>
-                <form style="padding-right: 15px;">
+                <form style="padding-right:15px;">
                     <div>
-                        <input id="title-book" class="input-form" type="text" name="title"
-                            placeholder="Enter book title" required>
+                        <label for="title-book">Book Title:</label>
+                        <input id="title-book" class="input-form" type="text" name="title" placeholder="Enter book title" required>
                     </div>
                     <div>
-                        <textarea id="desc-book" class="input-form" style="font-family: sans-serif;" name="description"
-                            placeholder="Enter description" rows="5" required></textarea>
+                        <label for="desc-book">Description:</label>
+                        <textarea id="desc-book" class="input-form" style="font-family: sans-serif;" name="description" placeholder="Enter description" rows="5" required></textarea>
                     </div>
                     <div class="flex-input">
                         <div>
-                            <input id="author-book" class="input-form" type="text" name="author"
-                                placeholder="Herb Hillaby, Josie,.." required>
+                            <label for="author-book">Author(s):</label>
+                            <input id="author-book" class="input-form" type="text" name="author" placeholder="Herb Hillaby, Josie,.." required>
                         </div>
                         <div>
-                            <input id="language-book" class="input-form" type="text" name="language"
-                                placeholder="English, Arabic, .." required>
+                            <label for="language-book">Language:</label>
+                            <input id="language-book" class="input-form" type="text" name="language" placeholder="English, Arabic, .." required>
                         </div>
                         <div>
-                            <input id="gener-book" class="input-form" type="text" name="gener"
-                                placeholder="Non-Fiction, Art,.." required>
+                            <label for="gener-book">Genre:</label>
+                            <input id="gener-book" class="input-form" type="text" name="gener" placeholder="Non-Fiction, Art,.." required>
                         </div>
                         <div>
-                            <input id="url-img" class="input-form" type="text" name="urlImage" placeholder="https://.."
-                                required>
+                            <label for="url-img">Image URL:</label>
+                            <input id="url-img" class="input-form" type="text" name="urlImage" placeholder="https://.." required>
                         </div>
                     </div>
                     <div class="submit-button">
@@ -146,24 +146,22 @@
                         <img src="https://gramentheme.com/html/bookle/assets/img/shop-details/01.png">
                     </div>
                     <div class="sec-2">
-                        <h1>Castle In The Sky</h1>
-                        <div>
-                            <b>by (author) </b>
-                            <span style="font-size: 14px;">Sara Sayed Ahmad</span>
+                        <h1></h1>
+                        <div class="author-name">
+                            <b>by </b>
+                            <span style="font-size: 14px;"></span>
                         </div>
-                        <p>Vestibulum consectetur fringilla tellus, et pulvinar massa tempus nec. Fusce nibh nibh,
-                            consectetur vitae felis quis, sagittis ullamcorper enim. Nullam maximus vehicula justo, vel
-                            vestibulum turpis dictum at. Nam sed laoreet sem. Aliquam urna massa,</p>
+                        <p></p>
                         <div class="details-book">
                             <span class="display-data">
                                 <b>Type:</b>
-                                <span>Non-fiction</span>
+                                <span id="model-book-gener"></span>
                             </span>
                             <span class="display-data">
                                 <b>Language:</b>
-                                <span>English</span>
+                                <span id="model-book-language"></span>
                             </span>
-                            <p style="color: gray;font-size: 12px;">7-7-2023</p>
+                            <p id="model-added-date" style="color: gray;font-size: 12px;"></p>
                         </div>
 
                         <!-- buttons -->
@@ -186,7 +184,7 @@
         </div>
     </section>
 </body>
-<script>
+<script type="module" src="./JS/myLibrary.js">
     let modal = document.getElementById("modal-book");
     let btn = document.getElementById("view-book");
     let span = document.getElementsByClassName("close")[0];
