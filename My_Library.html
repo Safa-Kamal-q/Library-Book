@@ -44,28 +44,34 @@
                 <form style="padding-right:15px;">
                     <div>
                         <label for="title-book">Book Title:</label>
-                        <input id="title-book" class="input-form" type="text" name="title" placeholder="Enter book title" required>
+                        <input id="title-book" class="input-form" type="text" name="title"
+                            placeholder="Enter book title" required>
                     </div>
                     <div>
                         <label for="desc-book">Description:</label>
-                        <textarea id="desc-book" class="input-form" style="font-family: sans-serif;" name="description" placeholder="Enter description" rows="5" required></textarea>
+                        <textarea id="desc-book" class="input-form" style="font-family: sans-serif;" name="description"
+                            placeholder="Enter description" rows="5" required></textarea>
                     </div>
                     <div class="flex-input">
                         <div>
                             <label for="author-book">Author(s):</label>
-                            <input id="author-book" class="input-form" type="text" name="author" placeholder="Herb Hillaby, Josie,.." required>
+                            <input id="author-book" class="input-form" type="text" name="author"
+                                placeholder="Herb Hillaby, Josie,.." required>
                         </div>
                         <div>
                             <label for="language-book">Language:</label>
-                            <input id="language-book" class="input-form" type="text" name="language" placeholder="English, Arabic, .." required>
+                            <input id="language-book" class="input-form" type="text" name="language"
+                                placeholder="English, Arabic, .." required>
                         </div>
                         <div>
                             <label for="gener-book">Genre:</label>
-                            <input id="gener-book" class="input-form" type="text" name="gener" placeholder="Non-Fiction, Art,.." required>
+                            <input id="gener-book" class="input-form" type="text" name="gener"
+                                placeholder="Non-Fiction, Art,.." required>
                         </div>
                         <div>
                             <label for="url-img">Image URL:</label>
-                            <input id="url-img" class="input-form" type="text" name="urlImage" placeholder="https://.." required>
+                            <input id="url-img" class="input-form" type="text" name="urlImage" placeholder="https://.."
+                                required>
                         </div>
                     </div>
                     <div class="submit-button">
@@ -183,30 +189,9 @@
             </div>
         </div>
     </section>
+
+    <div class="pagination"></div>
+    <script type="module" src="./JS/myLibrary.js"></script>
 </body>
-<script type="module" src="./JS/myLibrary.js">
-    let modal = document.getElementById("modal-book");
-    let btn = document.getElementById("view-book");
-    let span = document.getElementsByClassName("close")[0];
-    let btnClose = document.getElementById("btn-close");
-
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    btnClose.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
 
 </html>
