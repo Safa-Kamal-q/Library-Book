@@ -1,0 +1,441 @@
+.rows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+:root {
+    --mainFont: sans-serif;
+    --subFont: "Inter", sans-serif;
+    --mainColor: #37405f;
+}
+
+/*start header*/
+.header {
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 1.6474391222000122px 8.23719596862793px rgba(0, 0, 0, 0.1);
+    background-color: var(--mainColor);
+    z-index: 100;
+    height: 70px;
+    padding: 20px 0;
+width: 100%;
+}
+
+
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.header .logo img {
+    width: 40px;
+
+}
+
+.header .logo a {
+    font-weight: bold;
+    color: #fff;
+}
+
+
+
+.header nav a {
+    color: #fff;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+
+
+.header .auth .login-Btn {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.header .auth .regester {
+    background-color: #fff;
+    color: var(--mainColor);
+}
+
+/*end header*/
+
+/* about us */
+.aboutUs {
+    
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-size: 50%;
+    color:var(--mainColor);
+    font-size: 25px;
+    opacity: 0.8;
+    justify-content: center;
+    
+
+}
+.aboutUs p{
+    width: 50%;
+    text-align: center;
+    
+}
+.aboutUs h2{
+    width: 50%;
+    text-align: center;
+    margin-bottom: 70px;
+}
+/* end about us */
+
+
+/* start login form */
+
+ .login-form-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background:rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    
+}
+.active{
+    display: flex;
+}
+
+.login-form-container form{
+    background:#ffffff;
+    border:1px solid rgb(0, 0,0.1); 
+    width:400px; 
+    padding:10px; 
+    box-shadow: 2px 2px  1px 2px rgba(0,0, 0, 0.3),-2px -2px 1px 2px rgba(0,0, 0, 0.3); 
+    border-radius: 5px; 
+    margin:2px; 
+    }
+    .login-form-container form h3{
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #444;
+        text-align: center;
+    }
+    .login-form-container form span{
+        display: block;
+        font-size: 24px;
+        padding-top: 16px;
+    }
+    .login-form-container form .box{
+        width: 100%;
+        margin: 5px 0;
+        font-size: 15px;
+        border:1px solid rgb(0, 0,0.1);
+        border-radius: 80px;
+        padding: 5px 5px;
+        color: #444;
+        text-transform: none;
+        box-shadow: 2px 2px  1px 1px rgba(0,0, 0, 0.3); 
+
+    }
+    .login-form-container form .checkbox{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 0;
+    }
+    .login-form-container form .checkbox label{
+        font-size: 15px;
+        color:#949697 ;
+        cursor: pointer;
+
+    }
+    .login-form-container form .btn{
+       
+        text-align: center;
+        width: 100%;
+        margin-top:5px;
+        display: inline-block;
+        padding:5px 5px;
+        border-radius: 8px;
+        color: #fff;
+        background-color: var(--mainColor);
+        font-size: 22px;
+        cursor: pointer;
+    
+    }
+    .login-form-container form .btn:hover{
+        background-color: #61798f;
+    }
+    .login-form-container form p{
+        padding-top: 5px;
+        color: #949697;
+        font-size: 16px;
+    }
+    .login-form-container form p a{
+        color: var(--mainColor);
+
+    }
+    .login-form-container .close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        color: var(--mainColor);
+        cursor: pointer;
+    }
+
+/* slider */
+
+.carousel-item {
+    background-size: cover;
+    background-position: bottom;
+}
+
+.carousel_Box {
+    text-align: center;
+    padding: 50px;
+    width: 950px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-top: 5px solid var(--mainColor);
+    border-radius: 3px;
+}
+
+.carousel_Box .btn-outline-main {
+    --bs-btn-color: var(--mainColor);
+    --bs-btn-border-color: var(--mainColor);
+    --bs-btn-hover-color: var(--mainColor);
+    --bs-btn-hover-bg:#fff;
+    --bs-btn-hover-border-color: var(--mainColor);
+    --bs-btn-focus-shadow-rgb: 25, 135, 84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--mainColor);
+    --bs-btn-active-border-color:var(--mainColor);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color:var(--mainColor);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color:var(--mainColor);
+    --bs-gradient: none;
+   
+}
+.carousel_Box .btn{
+    background-color: var(--mainColor);
+    color:#fff;
+    font-weight: 90px;
+}
+
+/* end slider */
+
+/* more Reading */
+.moreReadingSec{
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.readMoreContent{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 90px 32px;
+}
+
+.moreReadingSec  h1 {
+    position: relative;
+    text-align: center; 
+ 
+  }
+  .moreReadingSec  h1 span
+  {
+  border:1px solid rgb(0, 0,0.1); 
+  padding: 8px 32px;
+  font-size: 32px;
+  box-shadow: 2px 2px 6px 4px rgba(0,0, 0, 0.3); 
+
+
+  } 
+  .moreReadingSec  h1::before,
+  .moreReadingSec h1::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 41.9%;
+    height: 1px; 
+    background-color: #444;
+  }
+  
+  .moreReadingSec   h1::before {
+    left: 0;
+  }
+  
+  .moreReadingSec  h1::after {
+    right: 0;
+  }
+.moreRead .box{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    gap: 5px;
+    padding: 15px 16px;
+  border:1px solid rgb(0, 0,0.1);
+  box-shadow: 1px 1px 2px 2px rgba(0,0, 0, 0.3); 
+
+    margin: 16px 0;
+}
+.moreRead .box:hover{
+    border: 1px solid #444;
+    box-shadow: 4px 4px 6px 4px rgba(0,0, 0, 0.3),-4px 4px 6px 4px rgba(0,0, 0, 0.3); 
+
+}
+.moreRead .box .image img{
+    box-shadow: 2px 2px 6px 4px rgba(0,0, 0, 0.3);
+    width: 180px;
+    height: 281px;
+
+}
+.moreRead .box h3{
+    font-size: 24px;
+    color: #444;
+}
+.moreRead .box .content .uth{
+    font-size: 28px;
+    color: #444;
+    padding-bottom: 8px;
+}
+.moreRead .box .content .stars i{
+   font-size: 24px;
+   color: var(--mainColor);
+}
+/* end more Reading */
+/* footer */
+.footer {
+    background-color: var(--mainColor);
+    color: #fff;
+    padding: 50px 0;
+
+    position: relative;
+    height: 200px;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer .row {
+    gap: 45px;
+}
+
+.footer .start_footer,
+.footer .end_footer {
+    width: calc((100% - 45px) / 2);
+}
+
+
+
+.start_footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.footer .start_footer .logo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer .start_footer .logo img {
+    width: 55px;
+}
+
+.footer .start_footer .logo a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
+.footer .start_footer .icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer .start_footer .icons img {
+
+    border: 1px solid #F4F4F4;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    box-sizing: content-box;
+    background-color: #7b7b8d;
+
+}
+.footer .start_footer .icons img:hover
+{
+    background-color: #babac5;
+
+}
+
+.footer .end_footer .formContact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer .end_footer .formContact .textarea {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer .end_footer .formContact .textarea textarea {
+    background-color: var(--mainColor);
+    border: 2px solid #7b7b8d;
+    border-radius: 2px;
+    height: 40px;
+}
+
+.footer .end_footer .formContact .button {
+    padding: 5px;
+    width: 90px;
+    height: 40px;
+    border: 2px solid var(--mainColor);
+    border-radius: 5px;
+    box-shadow: #9cb6cc;
+    font-size: small;
+}
+
+.footer .tail_footer {
+    background-color: #2d324b;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.footer .tail_footer p {
+    margin: 5px;
+
+}
+
+.footer .tail_footer svg {
+    width: 15px;
+}
