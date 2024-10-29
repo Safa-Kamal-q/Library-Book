@@ -1,60 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reading List </title>
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="file:///C:/Users/Admin/Pictures/Screenshots/Screenshot 2024-10-22 173414.png"> -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reading List </title>
 
-    <!-- css style -->
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="./CSS/reading_list_style.css">
-</head>
-<body>
-    <!-- background image -->
-    <section style="position: relative;">
-        <div class="bg-img">
-            <div class="text-bg">
-                <h1>
-                    The Best Books
-                    <span>Reading Now</span>
-                </h1>
+        <!-- logo  -->
+        <link rel="shortcut icon" type="image/x-icon" href="./imgs/logo-bro.png">
+
+        <!-- css style -->
+        <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" href="./CSS/reading_list_style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="containers">
+                <div class="rows">
+                    <div class="logo">
+                        <img src="./imgs/icons/Code Book (1).png" />
+                        <a href="#">BookNest</a>
+                    </div>
+                    <nav class="nav">
+                        <ul>
+                            <li>
+                                <a href="./index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="#aboutUs">About Us</a>
+                            </li>
+                            <li>
+                                <a href="./My_Library.html">My Library</a>
+                            </li>
+                            <li>
+                                <a href="./Reading_list.html" class="bold">Reading List</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Books -->
-    <section class="container">
-        <!-- Name page -->
-        <h2 class="text-page">
-            <a href="./Home.html">Home |</a>
-            <span> Reading List</span>
-        </h2>
+        <main>
+            <!-- background image -->
+            <section style="position: relative;">
+                <div class="bg-img">
+                    <div class="text-bg">
+                        <h1>
+                            The Best Books
+                            <span>Reading Now</span>
+                        </h1>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Search button -->
-        <div class="search-books">
-            <input type="search" placeholder="Search" aria-label="Search book">
-            <button id="filterButton">
-                Filter
-                <svg style="margin-left: 6px;" xmlns="http://www.w3.org/2000/svg" height="18" width="13" viewBox="0 0 320 512">
-                    <path fill="#37405f" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/>
+            <!-- Books -->
+            <section class="containers">
+                <!-- Name page -->
+                <h2 class="text-page">
+                    <a href="./index.html">Home |</a>
+                    <span> Reading List</span>
+                </h2>
+
+                <!-- Search button -->
+                <div class="search-books">
+                    <input type="search" placeholder="Search" aria-label="Search book">
+                    <button id="filterButton">
+                        Filter
+                        <svg style="margin-left: 6px;" xmlns="http://www.w3.org/2000/svg" height="18" width="13" viewBox="0 0 320 512">
+                            <path fill="#37405f" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/>
+                        </svg>
+                    </button>
+                
+                    <!-- List filter -->
+                    <div id="filtercontainers">
+                        <ul class="list-filter" id="filterOptions">
+                            <li data-filter="title">Book Title</li>
+                            <li data-filter="author">Author</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Book Cards -->
+                <div class="books-card" style="margin-bottom: 80px;"></div>
+            </section>
+        </main>
+
+        <footer class="footer" id="contact">
+            <div class="containers">
+                <div class="row">
+                    <div class="start_footer">
+                        <div class="logo">
+                            <img src="./imgs/icons/Code Book (1).png" />
+                        </div>
+    
+                        <div class="icons">
+                            <a href="instagram"> <img src="./imgs/icons/instagram logo.svg" /></a>
+                            <a href="facebok"><img src="./imgs/icons/facebok.svg" /></a>
+                            <a href="linkedin"><img src="./imgs/icons/linkedIn.svg" /></a>
+                            <a href="twitte"><img src="./imgs/icons/Twitter logo.svg" /></a>
+                        </div>
+                    </div>
+    
+                    <div class="end_footer">
+                        <form class="formContact">
+                            <div class="textarea">
+                                <label>Share Us Your Comments</label>
+                                <textarea id="textarea" name="Notes"></textarea>
+                                <input class="button" type="submit" value="submit" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="tail_footer">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="#f2f2f2"
+                        d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM160 152l0 112 0 96c0 13.3 10.7 24 24 24s24-10.7 24-24l0-72 60.9 0 37.2 81.9c5.5 12.1 19.7 17.4 31.8 11.9s17.4-19.7 11.9-31.8L315.7 275c21.8-14.3 36.3-39 36.3-67c0-44.2-35.8-80-80-80l-88 0c-13.3 0-24 10.7-24 24zm48 88l0-64 64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0z" />
                 </svg>
-            </button>
-        
-            <!-- List filter -->
-            <div id="filterContainer">
-                <ul class="list-filter" id="filterOptions">
-                    <li data-filter="title">Book Title</li>
-                    <li data-filter="author">Author</li>
-                </ul>
+                <p>Nouran | Sara | Safa</p>
             </div>
-        </div>
+            </div>
+        </footer>
         
-        <!-- Book Cards -->
-        <div class="books-card" style="margin-bottom: 45px;"></div>
-
-    </section>
-
-    <script type="module" src="./JS/readingList.js"></script>
-</body>
+        <!-- JS -->
+        <script type="module" src="./JS/readingList.js"></script>
+    </body>
 </html>

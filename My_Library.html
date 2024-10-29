@@ -1,197 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Library</title>
+        <!-- Logo Library -->
+        <link rel="shortcut icon" type="image/x-icon" href="./imgs/logo-bro.png">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Library</title>
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="file:///C:/Users/Admin/Pictures/Screenshots/Screenshot 2024-10-22 173414.png"> -->
-
-    <!-- css style -->
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="./CSS/my_library_style.css">
-</head>
-
-<body>
-    <!-- background image -->
-    <section style="position: relative;">
-        <div class="bg-img">
-            <div class="text-bg">
-                <h1>
-                    Get All the Books
-                    <span style="color: #3A9FC0;display: block;">Your Need!</span>
-                </h1>
+        <!-- css style -->
+        <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" href="./CSS/my_library_style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="containers">
+                <div class="rows">
+                    <div class="logo">
+                        <img src="./imgs/icons/Code Book (1).png" />
+                        <a href="#">BookNest</a>
+                    </div>
+                    <nav class="nav">
+                        <ul>
+                            <li>
+                            <li>
+                                <a href="./index.html">Home</a>
+                            </li>
+    
+                            <li>
+                                <a href="#aboutUs">About Us</a>
+                            </li>
+                            <li>
+                                <a href="./My_Library.html" class="bold">My Library</a>
+                            </li>
+                            <li>
+                                <a href="./Reading_list.html">Reading List</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Add new books -->
-    <div class="Add-book">
-        <button id="btn-add">
-            <span>Book</span>
-            <span>
-                <svg xmlns="http://www.w3.org/2000/svg" height="18" width="17.5" viewBox="0 0 448 512">
-                    <path fill="white"
-                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
-                </svg>
-            </span>
-        </button>
+        <main>
+            <!-- background image -->
+            <section style="position: relative;">
+                <div class="bg-img">
+                    <div class="text-bg">
+                        <h1>
+                            Get All the Books
+                            <span style="color: #3A9FC0;display: block;">Your Need!</span>
+                        </h1>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Form Add Books -->
-        <div class="card-add" id="form-book">
-            <div>
-                <h2 style="text-align: center;">Add Book </h2>
-                <form style="padding-right:15px;">
+            <!-- Add new books -->
+            <div class="Add-book">
+                <button id="btn-add">
+                    <span>Book</span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" width="17.5" viewBox="0 0 448 512">
+                            <path fill="white" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                        </svg>
+                    </span>
+                </button>
+
+                <!-- Form Add Books -->
+                <div class="card-add" id="form-book">
                     <div>
-                        <label for="title-book">Book Title:</label>
-                        <input id="title-book" class="input-form" type="text" name="title"
-                            placeholder="Enter book title" required>
-                    </div>
-                    <div>
-                        <label for="desc-book">Description:</label>
-                        <textarea id="desc-book" class="input-form" style="font-family: sans-serif;" name="description"
-                            placeholder="Enter description" rows="5" required></textarea>
-                    </div>
-                    <div class="flex-input">
-                        <div>
-                            <label for="author-book">Author(s):</label>
-                            <input id="author-book" class="input-form" type="text" name="author"
-                                placeholder="Herb Hillaby, Josie,.." required>
-                        </div>
-                        <div>
-                            <label for="language-book">Language:</label>
-                            <input id="language-book" class="input-form" type="text" name="language"
-                                placeholder="English, Arabic, .." required>
-                        </div>
-                        <div>
-                            <label for="gener-book">Genre:</label>
-                            <input id="gener-book" class="input-form" type="text" name="gener"
-                                placeholder="Non-Fiction, Art,.." required>
-                        </div>
-                        <div>
-                            <label for="url-img">Image URL:</label>
-                            <input id="url-img" class="input-form" type="text" name="urlImage" placeholder="https://.."
-                                required>
-                        </div>
-                    </div>
-                    <div class="submit-button">
-                        <button type="button">Submit Book</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <section class="container">
-        <!-- Name page -->
-        <h2 class="text-page">
-            <a href="./Home.html">Home |</a>
-            <span> My Library</span>
-        </h2>
-
-        <!-- Search button -->
-        <div class="search-books">
-            <input type="search" placeholder="Search" aria-label="Search book">
-            <button id="filterButton">
-                Filter
-                <svg style="margin-left: 6px;" xmlns="http://www.w3.org/2000/svg" height="18" width="13"
-                    viewBox="0 0 320 512">
-                    <path fill="#37405f"
-                        d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
-                </svg>
-            </button>
-
-            <!-- List filter -->
-            <div id="filterContainer">
-                <ul class="list-filter" id="filterOptions">
-                    <li data-filter="title">Book Title</li>
-                    <li data-filter="author">Author</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- All Books -->
-        <div class="book-list" style="margin-bottom: 45px;">
-            <div class="book-card">
-                <div class="bg-book">
-                    <!-- content of the book -->
-                    <img class="img-book" src="https://gramentheme.com/html/bookle/assets/img/book/01.png">
-                    <div>
-                        <span class="gener">Non-Fiction</span>
-                        <h3 style="margin-top: 5px;">Castle In The Sky</h3>
-                        <label>Sara Sayed Ahmad</label>
-
-                        <div class="bt-book">
-                            <div class="tooltip" style="margin-top: 0;">
-                                <span class="tooltiptext">Mark as read</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5"
-                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                    <path fill="#37405f"
-                                        d="M0 96C0 43 43 0 96 0l96 0 0 190.7c0 13.4 15.5 20.9 26 12.5L272 160l54 43.2c10.5 8.4 26 .9 26-12.5L352 0l32 0 32 0c17.7 0 32 14.3 32 32l0 320c0 17.7-14.3 32-32 32l0 64c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0L96 512c-53 0-96-43-96-96L0 96zM64 416c0 17.7 14.3 32 32 32l256 0 0-64L96 384c-17.7 0-32 14.3-32 32z" />
-                                </svg>
+                        <h2 style="text-align: center;">Add Book </h2>
+                        <form style="padding-right:15px;">
+                            <div>
+                                <input id="title-book" class="input-form" type="text" name="title" placeholder="Enter book title" required>
                             </div>
-                            <div id="view-book">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="22.5"
-                                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                    <path fill="#37405f"
-                                        d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
-                                </svg>
+                            <div>
+                                <textarea id="desc-book" class="input-form" style="font-family: sans-serif;" name="description" placeholder="Enter description" rows="5" required></textarea>
+                            </div>
+                            <div class="flex-input">
+                                <div>
+                                    <input id="author-book" class="input-form" type="text" name="author" placeholder="Herb Hillaby, Josie,.." required>
+                                </div>
+                                <div>
+                                    <input id="language-book" class="input-form" type="text" name="language" placeholder="English, Arabic, .." required>
+                                </div>
+                                <div>
+                                    <input id="genre-book" class="input-form" type="text" name="genre" placeholder="Non-Fiction, Art,.." required>
+                                </div>
+                                <div>
+                                    <input id="url-img" class="input-form" type="text" name="urlImage" placeholder="https://.." required>
+                                </div>
+                            </div>
+                            <div class="submit-button">
+                                <button type="button">Submit Book</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <section class="containers" style="margin-bottom: 90px;">
+                <!-- Name page -->
+                <h2 class="text-page">
+                    <a href="./index.html">Home |</a>
+                    <span> My Library</span>
+                </h2>
+
+                <!-- Search button -->
+                <div class="search-books">
+                    <input type="search" placeholder="Search" aria-label="Search book">
+                    <button id="filterButton">
+                        Filter
+                        <svg style="margin-left: 6px;" xmlns="http://www.w3.org/2000/svg" height="18" width="13"
+                            viewBox="0 0 320 512">
+                            <path fill="#37405f" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                        </svg>
+                    </button>
+
+                    <!-- List filter -->
+                    <div id="filtercontainers">
+                        <ul class="list-filter" id="filterOptions">
+                            <li data-filter="title">Book Title</li>
+                            <li data-filter="author">Author</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- All Books -->
+                <div class="book-list" style="margin-bottom: 66px;">
+                    <div class="book-card">
+                        <div class="bg-book">
+                            <!-- content of the book -->
+                            <img class="img-book" src="https://gramentheme.com/html/bookle/assets/img/book/01.png">
+                            <div>
+                                <span class="genre">Non-Fiction</span>
+                                <h3 style="margin-top: 5px;">Castle In The Sky</h3>
+                                <label>Sara Sayed Ahmad</label>
+
+                                <div class="bt-book">
+                                    <div class="tooltip" style="margin-top: 0;">
+                                        <span class="tooltiptext">Mark as read</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5"
+                                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path fill="#37405f" d="M0 96C0 43 43 0 96 0l96 0 0 190.7c0 13.4 15.5 20.9 26 12.5L272 160l54 43.2c10.5 8.4 26 .9 26-12.5L352 0l32 0 32 0c17.7 0 32 14.3 32 32l0 320c0 17.7-14.3 32-32 32l0 64c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0L96 512c-53 0-96-43-96-96L0 96zM64 416c0 17.7 14.3 32 32 32l256 0 0-64L96 384c-17.7 0-32 14.3-32 32z" />
+                                        </svg>
+                                    </div>
+                                    <div id="view-book">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="22.5" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path fill="#37405f" d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Modal: Book details -->
-        <div id="modal-book" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <div class="modal-body">
-                    <div class="sec-1">
-                        <img src="https://gramentheme.com/html/bookle/assets/img/shop-details/01.png">
-                    </div>
-                    <div class="sec-2">
-                        <h1></h1>
-                        <div class="author-name">
-                            <b>by </b>
-                            <span style="font-size: 14px;"></span>
-                        </div>
-                        <p></p>
-                        <div class="details-book">
-                            <span class="display-data">
-                                <b>Type:</b>
-                                <span id="model-book-gener"></span>
-                            </span>
-                            <span class="display-data">
-                                <b>Language:</b>
-                                <span id="model-book-language"></span>
-                            </span>
-                            <p id="model-added-date" style="color: gray;font-size: 12px;"></p>
-                        </div>
+                <!-- Pageination -->
+                <div class="pagination"></div>
+            </section>
 
-                        <!-- buttons -->
-                        <div class="modal-button">
-                            <div class="tooltip" style="margin-top: 0;">
-                                <span class="tooltiptext">Mark as read</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5"
-                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                    <path fill="#37405f"
-                                        d="M0 96C0 43 43 0 96 0l96 0 0 190.7c0 13.4 15.5 20.9 26 12.5L272 160l54 43.2c10.5 8.4 26 .9 26-12.5L352 0l32 0 32 0c17.7 0 32 14.3 32 32l0 320c0 17.7-14.3 32-32 32l0 64c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0L96 512c-53 0-96-43-96-96L0 96zM64 416c0 17.7 14.3 32 32 32l256 0 0-64L96 384c-17.7 0-32 14.3-32 32z" />
-                                </svg>
+            <!-- Modal: Book details -->
+            <div id="modal-book" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="modal-body">
+                        <div class="sec-1">
+                            <img src="https://gramentheme.com/html/bookle/assets/img/shop-details/01.png">
+                        </div>
+                        <div class="sec-2">
+                            <h1></h1>
+                            <div class="author-name">
+                                <b>by </b>
+                                <span style="font-size: 14px;"></span>
                             </div>
-                            <div>
+                            <p></p>
+                            <div class="details-book">
+                                <span class="display-data">
+                                    <b>Type:</b>
+                                    <span id="model-book-genre"></span>
+                                </span>
+                                <span class="display-data">
+                                    <b>Language:</b>
+                                    <span id="model-book-language"></span>
+                                </span>
+                                <p id="model-added-date" style="color: gray;font-size: 12px;"></p>
+                            </div>
+
+                            <!-- button -->
+                            <div class="modal-button">
                                 <button id="btn-close">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </main>
 
-    <div class="pagination"></div>
-    <script type="module" src="./JS/myLibrary.js"></script>
-</body>
+        <footer class="footer" id="contact">
+            <div class="containers">
+                <div class="row">
+                    <div class="start_footer">
+                        <div class="logo">
+                            <img src="./imgs/icons/Code Book (1).png" />
+                        </div>
+                        <div class="icons">
+                            <a href="instagram"> <img src="./imgs/icons/instagram logo.svg" /></a>
+                            <a href="facebok"><img src="./imgs/icons/facebok.svg" /></a>
+                            <a href="linkedin"><img src="./imgs/icons/linkedIn.svg" /></a>
+                            <a href="twitte"><img src="./imgs/icons/Twitter logo.svg" /></a>
+                        </div>
+                    </div>
+    
+                    <div class="end_footer">
+                        <form class="formContact">
+                            <div class="textarea">
+                                <label>Share Us Your Comments</label>
+                                <textarea id="textarea" name="Notes"></textarea>
+                                <input class="button" type="submit" value="submit" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="tail_footer">
+               <span style="margin-top: 7px;">
+                    &#169;
+               </span>
+                <p>Nouran | Sara | Safa</p>
+            </div>
+        </footer>
 
+        <!-- JS links -->
+        <script type="module" src="./JS/myLibrary.js"></script>
+    </body>
 </html>

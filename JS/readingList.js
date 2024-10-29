@@ -15,8 +15,6 @@ async function renderReadingList(filteredBooks = null) {
         const bookCard = document.createElement("div");
         bookCard.classList.add("book-details");
         bookCard.innerHTML = `
-        <div>
-            <div class="book-details">
                 <div class="img-book">
                     <img src=${book.cover_img}>
                 </div>
@@ -29,7 +27,7 @@ async function renderReadingList(filteredBooks = null) {
                             <span><b>Language:</b>${book.language}</span>
                         </div>
                         <div>
-                            <span><b>Type:</b>${book.gener}</span>
+                            <span><b>Type:</b>${book.genre}</span>
                             <span><b>Date:</b>${book.date_added}</span>
                         </div>
                     </div>
@@ -42,8 +40,7 @@ async function renderReadingList(filteredBooks = null) {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>`;
+            `;
 
         booksCardContainer.appendChild(bookCard);
     });

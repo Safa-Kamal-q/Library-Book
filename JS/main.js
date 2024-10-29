@@ -36,7 +36,7 @@ function changeReadStatus(bookId, bookCard = null) {
 
             tooltip.textContent = book.reading_status ? 'Mark as unread' : 'Mark as read';
 
-            bookCard.querySelector('.bg-book').style.border = book.reading_status ? '2px solid green' : '';
+            bookCard.querySelector('.bg-book').style.border = book.reading_status ? '2px solid #798897' : '';
 
             if (book.reading_status) {
                 iconPath.setAttribute('fill', '#01394c'); 

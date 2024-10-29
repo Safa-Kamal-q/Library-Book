@@ -28,7 +28,7 @@ function renderMyLibrary(filteredBooks = null, page = 1) {
             <div class="bg-book">
                 <img class="img-book" src="${book.cover_img || 'https://via.placeholder.com/150'}" alt="${book.title}">
                 <div>
-                    <span class="gener">${book.gener || "Unknown Genre"}</span>
+                    <span class="genre">${book.genre || "Unknown Genre"}</span>
                     <h3 style="margin-top: 5px;">${book.title}</h3>
                     <label>${book.author}</label>
 
@@ -53,7 +53,7 @@ function renderMyLibrary(filteredBooks = null, page = 1) {
         `;
 
         if (book.reading_status) {
-            bookCard.querySelector('.bg-book').style.border = "2px solid green";
+            bookCard.querySelector('.bg-book').style.border = "2px solid #798897";
         } 
 
         bookList.appendChild(bookCard);
@@ -81,7 +81,7 @@ function setupAddBookForm() {
         const description = document.getElementById("desc-book").value;
         const author = document.getElementById("author-book").value;
         const language = document.getElementById("language-book").value;
-        const gener = document.getElementById("gener-book").value;
+        const genre = document.getElementById("genre-book").value;
         const cover_img = document.getElementById("url-img").value;
 
         if (!title || !author || !language) {
@@ -95,7 +95,7 @@ function setupAddBookForm() {
             description: description,
             author: author,
             language: language,
-            gener: gener,
+            genre: genre,
             cover_img: cover_img,
             date_added: Date.now(),
             reading_status: false,
@@ -132,7 +132,7 @@ function openModalView(event) {
     modal.querySelector(".sec-2 h1").textContent = book.title;
     modal.querySelector(".sec-2 .author-name span").textContent = book.author;
     modal.querySelector(".sec-2 p").textContent = book.description;
-    modal.querySelector("#model-book-gener").textContent = book.gener;
+    modal.querySelector("#model-book-genre").textContent = book.genre;
     modal.querySelector("#model-book-language").textContent = book.language;
     modal.querySelector("#model-added-date").textContent = `Added Date: ${book.date_added}`;
 

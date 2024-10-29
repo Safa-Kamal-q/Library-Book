@@ -21,10 +21,6 @@
 .Add-book button span{
     margin-right: 8px;
 }
-/* when click button "Add Book" */
-.openButton{
-    right: 36% !important;
-}
 
 /* Card form add books */
 .Add-book .card-add{
@@ -82,6 +78,7 @@ form .submit-button button:active {
     align-items: end;
     border-top: 1px solid #ced4da;
     margin-top: 15px;
+    cursor: pointer;
 }
 
 /* Modal Book */
@@ -127,7 +124,6 @@ form .submit-button button:active {
     font-size: 34px;
 }
 .modal-content .modal-body p{
-    line-height: 1.7;
     letter-spacing: 1px;
 }
 .modal-body .sec-1{
@@ -152,22 +148,25 @@ form .submit-button button:active {
     flex-basis: 50%;
 }
 .modal-button{
-    display: flex;
-    justify-content: space-between;
+   text-align: end;
+   padding-top: 12px;
 }
-.modal-button div>button{
+.modal-button button{
     background-color: #37405f;
     border-radius: 16px;
     color: white;
-    width: 65px;
+    width: 82px;
     border: none;
-    height: 30px;
+    height: 35px;
     font-size: 14px;
 }
+
+/* Pagination */
 .pagination {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .page-button {
     padding: 8px 12px;
@@ -186,4 +185,41 @@ form .submit-button button:active {
 }
 .page-button:hover {
     background-color: #2d3651;
+}
+
+/* Card Books */
+section .book-list{
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    row-gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.book-list .bg-book{
+    background-color: #d1d1d645;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 12px;
+    box-shadow: 3px 0px 10px 1px #d4d3d6;
+}
+.book-list .book-card{
+    flex-basis: 18%;
+    display: flex;
+    flex-direction: column;
+    column-gap: 5px;
+}
+.book-list .book-card .img-book{
+    width: 100%;
+    height: 296px;
+    object-fit: fill;
+}
+.bg-book div{
+    padding-top: 10px;
+}
+
+.book-list .bg-book .genre{
+    font-size: 14px;
+    color: #2494b9;
 }
