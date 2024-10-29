@@ -2,24 +2,28 @@
     padding: 0%;
     margin: 0%;
 }
+
 body {
-    background-image: url(../imgs/Bibliophile-rafiki\ \(2\).png);
-    background-position: right center ;
-     background-size: 36%;
+    background-image: url(../images/register\ img.png);
+    background-position: right center;
+    background-size: 36%;
     background-repeat: no-repeat;
     opacity: 0.8;
 }
+
 :root {
     --mainFont: sans-serif;
     --subFont: "Inter", sans-serif;
     --mainColor: #37405f;
 }
+
 .RegisterForm h1 {
     font-size: 30px;
     text-transform: uppercase;
     color: var(--mainColor);
     text-align: center;
 }
+
 .RegisterForm {
     display: flex;
     flex-direction: column;
@@ -30,13 +34,15 @@ body {
     margin-left: 150px;
     border-radius: 6px;
 }
-.RegisterForm  span{
+
+.RegisterForm span {
     display: block;
     font-size: 17px;
     padding-top: 24px;
     padding-bottom: 5px;
 }
-.RegisterForm  .box {
+
+.RegisterForm .box {
     width: 100%;
     margin: 2px 0;
     font-size: 14px;
@@ -47,11 +53,13 @@ body {
     box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
     border-radius: 3px;
 }
-.RegisterForm .box:hover{
+
+.RegisterForm .box:hover {
     border: 1px solid #444;
-    box-shadow: 4px 4px 6px 4px rgba(0,0, 0, 0.3),-4px 4px 6px 4px rgba(0,0, 0, 0.3); 
+    box-shadow: 4px 4px 6px 4px rgba(0, 0, 0, 0.3), -4px 4px 6px 4px rgba(0, 0, 0, 0.3);
 }
-.RegisterForm  .btn {
+
+.RegisterForm .btn {
     text-align: center;
     width: 102%;
     margin-top: 35px;
@@ -65,6 +73,7 @@ body {
     border-radius: 8px;
     border: none;
 }
-.RegisterForm .btn:hover{
+
+.RegisterForm .btn:hover {
     background-color: #6e879e;
 }

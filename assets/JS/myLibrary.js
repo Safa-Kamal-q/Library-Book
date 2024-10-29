@@ -17,6 +17,7 @@ function renderMyLibrary(filteredBooks = null, page = 1) {
 
     if (paginatedBooks.length === 0) {
         bookList.innerHTML = `<p>No books to display</p>`;
+        renderPaginationControls(totalPages, page);
         return;
     }
 
@@ -37,9 +38,9 @@ function renderMyLibrary(filteredBooks = null, page = 1) {
                             <span class="tooltiptext">${book.reading_status ? "Mark as unread" : "Mark as read"}</span>
                             <svg class="mark-read-icon" data-id="${book.id}" xmlns="http://www.w3.org/2000/svg" height="20" width="22.5" viewBox="0 0 576 512">
                                 <path fill="${book.reading_status ? '#01394c' : '#37405f'}" 
-                                    d="${book.reading_status 
-                                    ? 'M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5l0-377.4c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8L0 454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5l0-370.3c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11L304 456c0 11.4 11.7 19.3 22.4 15.5z' 
-                                    : 'M0 96C0 43 43 0 96 0l96 0 0 190.7c0 13.4 15.5 20.9 26 12.5L272 160l54 43.2c10.5 8.4 26 .9 26-12.5L352 0l32 0 32 0c17.7 0 32 14.3 32 32l0 320c0 17.7-14.3 32-32 32l0 64c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0L96 512c-53 0-96-43-96-96L0 96zM64 416c0 17.7 14.3 32 32 32l256 0 0-64L96 384c-17.7 0-32 14.3-32 32z'}" />
+                                    d="${book.reading_status
+                ? 'M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5l0-377.4c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8L0 454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5l0-370.3c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11L304 456c0 11.4 11.7 19.3 22.4 15.5z'
+                : 'M0 96C0 43 43 0 96 0l96 0 0 190.7c0 13.4 15.5 20.9 26 12.5L272 160l54 43.2c10.5 8.4 26 .9 26-12.5L352 0l32 0 32 0c17.7 0 32 14.3 32 32l0 320c0 17.7-14.3 32-32 32l0 64c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0L96 512c-53 0-96-43-96-96L0 96zM64 416c0 17.7 14.3 32 32 32l256 0 0-64L96 384c-17.7 0-32 14.3-32 32z'}" />
                             </svg>
                         </div>
                         <div class="view-book" data-id-model="${book.id}">
@@ -54,7 +55,7 @@ function renderMyLibrary(filteredBooks = null, page = 1) {
 
         if (book.reading_status) {
             bookCard.querySelector('.bg-book').style.border = "2px solid #798897";
-        } 
+        }
 
         bookList.appendChild(bookCard);
     });
@@ -72,8 +73,17 @@ function setupAddBookForm() {
     const submitButton = formBook.querySelector(".submit-button button");
     const books = getBooks();
 
+    formBook.style.display = "none";
+    addButton.style.right = "0";
+
     addButton.addEventListener("click", () => {
-        formBook.style.display = formBook.style.display === "none" ? "block" : "none";
+        if (formBook.style.display === "none") {
+            formBook.style.display = "block";
+            addButton.style.right = "36%";
+        } else {
+            formBook.style.display = "none";
+            addButton.style.right = "0";
+        }
     });
 
     submitButton.addEventListener("click", () => {

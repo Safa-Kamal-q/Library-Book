@@ -201,7 +201,7 @@ footer, ::after, ::before{
 
 /* background img */
 section .bg-img{
-    background-image: url("../imgs/bg-reading-bright.jpg");
+    background-image: url("/assets/images/bg-reading-bright.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
