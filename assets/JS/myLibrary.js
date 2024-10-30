@@ -67,55 +67,65 @@ function renderMyLibrary(filteredBooks = null, page = 1) {
     renderPaginationControls(totalPages, page);
 }
 
-function setupAddBookForm() {
-    const addButton = document.getElementById("btn-add");
-    const formBook = document.getElementById("form-book");
-    const submitButton = formBook.querySelector(".submit-button button");
-    const books = getBooks();
-
-    formBook.style.display = "none";
-    addButton.style.right = "0";
-
-    addButton.addEventListener("click", () => {
-        if (formBook.style.display === "none") {
-            formBook.style.display = "block";
-            addButton.style.right = "36%";
-        } else {
-            formBook.style.display = "none";
-            addButton.style.right = "0";
-        }
-    });
-
-    submitButton.addEventListener("click", () => {
-        const title = document.getElementById("title-book").value;
-        const description = document.getElementById("desc-book").value;
-        const author = document.getElementById("author-book").value;
-        const language = document.getElementById("language-book").value;
-        const genre = document.getElementById("genre-book").value;
-        const cover_img = document.getElementById("url-img").value;
-
-        if (!title || !author || !language) {
-            alert("Please enter the Title, Author, and Language for the book.");
-            return;
-        }
+function setupAddBookForm() { 
+    const addButton = document.getElementById("btn-add"); 
+    const formBook = document.getElementById("form-book"); 
+    const submitButton = formBook.querySelector(".submit-button button"); 
+    const books = getBooks(); 
+ 
+    formBook.style.display = "none"; 
+    addButton.style.right = "0"; 
+ 
+    addButton.addEventListener("click", () => { 
+        if (formBook.style.display === "none") { 
+            formBook.style.display = "block"; 
+            addButton.style.right = "36%"; 
+        } else { 
+            formBook.style.display = "none"; 
+            addButton.style.right = "0"; 
+        } 
+    }); 
+ 
+    submitButton.addEventListener("click", () => { 
+        const titleInput = document.getElementById("title-book"); 
+        const descriptionInput = document.getElementById("desc-book"); 
+        const authorInput = document.getElementById("author-book"); 
+        const languageInput = document.getElementById("language-book"); 
+        const genreInput = document.getElementById("genre-book"); 
+        const coverImgInput = document.getElementById("url-img"); 
+ 
+        if (!titleInput.value || !authorInput.value || !languageInput.value) { 
+            alert("Please enter the Title, Author, and Language for the book."); 
+            return; 
+        } 
+ 
+        let date = new Date();
+        const dateNow = `${date.getDay()} / ${date.getMonth()} / ${date.getFullYear()}`; 
 
         const newBook = {
             id: books.length,
-            title: title,
-            description: description,
-            author: author,
-            language: language,
-            genre: genre,
-            cover_img: cover_img,
-            date_added: Date.now(),
+            title: titleInput.value,
+            description: descriptionInput.value,
+            author: authorInput.value,
+            language: languageInput.value,
+            genre: genreInput.value,
+            cover_img: coverImgInput.value,
+            date_added: dateNow,
             reading_status: false,
         };
-
-        addBook(newBook);
-        renderMyLibrary(getBooks(), currentPage);
-        formBook.style.display = "none";
-    });
+ 
+        addBook(newBook); 
+        renderMyLibrary(getBooks(), currentPage); 
+ 
+        titleInput.value = ""; 
+        descriptionInput.value = ""; 
+        authorInput.value = ""; 
+        languageInput.value = ""; 
+        genreInput.value = ""; 
+        coverImgInput.value = ""; 
+    }); 
 }
+
 
 function setupModalView() {
     const modal = document.getElementById("modal-book");
