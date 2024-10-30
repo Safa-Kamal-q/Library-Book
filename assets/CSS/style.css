@@ -19,6 +19,16 @@ p{
     line-height: 1.8;
 }
 
+.darck{
+    background-color:#171718;
+    color: hwb(0 100% 0%);
+    transition: 0.9s;
+}
+.darckBtn{
+    background-color: var(--mainColor);
+    border: none;
+}
+
 .rows {
     display: flex;
     justify-content: space-between;
@@ -73,7 +83,7 @@ p{
     color: #fff;
 }
 .header nav a:hover {
-    color: #29aad4;
+    color: #a1bec7a8;
 }
 .bold {
     font-weight: 900;
@@ -88,11 +98,20 @@ p{
     font-size: 16px;
     line-height: 1.5;
 }
+.header .auth .login-Btn:hover{
+    background-color: #a1bec7a8;
+    border: none;
+}
 .header .auth .regester {
     background-color: #fff;
     color: var(--mainColor);
     padding: 11px 15px;
     border-radius: 10px;
+}
+.header .auth .regester:hover{
+    background-color: #a1bec7a8;
+    color: #fff;
+
 }
 /*end header*/
 
@@ -351,6 +370,12 @@ section .book-list{
     display: flex;
     flex-direction: column;
     column-gap: 5px;
+    transition: transform 0.3s ease;
+}
+.book-list .book-card:hover{
+    box-shadow:  2px 2px 3px 3px rgba(79, 173, 202, 0.842) ;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 .book-list .book-card .img-book{
     width: 100%;
