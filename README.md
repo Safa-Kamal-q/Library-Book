@@ -1,10 +1,10 @@
 <h1 align="center">Library Book 📚</h1>
 
 ## ✨️ Table of contents
-- **[Project Instruction](https://github.com/Safa-Kamal-q/Library-Book/new/main#%EF%B8%8F-project-instruction)**
-- **[Tech Stack](https://github.com/Safa-Kamal-q/Library-Book/new/main#%EF%B8%8F-tech-stack)**
-- **[Installation and Usage](https://github.com/Safa-Kamal-q/Library-Book/new/main#%EF%B8%8F-installation-and-usage)**
-- **[Frontend Screens](https://github.com/Safa-Kamal-q/Library-Book/new/main#%EF%B8%8F-frontend-screens)**
+- **[Project Instruction](https://github.com/Safa-Kamal-q/Library-Book/edit/main/README.md#%EF%B8%8F-project-instruction)**
+- **[Tech Stack](https://github.com/Safa-Kamal-q/Library-Book/blob/main/README.md#%EF%B8%8F-tech-stack)**
+- **[Installation and Usage](https://github.com/Safa-Kamal-q/Library-Book/blob/main/README.md#%EF%B8%8F-installation-and-usage)**
+- **[Frontend Screens](https://github.com/Safa-Kamal-q/Library-Book/blob/main/README.md#%EF%B8%8F-frontend-screens)**
 
 ## ✨️ Project Instruction
 ### 📚**Project 5: Book Library**
